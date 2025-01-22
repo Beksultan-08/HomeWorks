@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 
 from django.http import HttpResponse
+from pprint import pprint
 
 
 def home(request):
