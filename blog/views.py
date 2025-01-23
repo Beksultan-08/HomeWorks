@@ -41,3 +41,8 @@ def filter(request):
     s = text.split()
     d = [i for i in s if len(i) > n]
     return HttpResponse(" ".join(d))
+
+def palindrome(request):
+    word = request.GET.get('word')
+    if word[0].lower == word[-1].lower:
+        return HttpResponse(f'{word} - palindrome')

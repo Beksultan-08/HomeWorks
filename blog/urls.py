@@ -8,5 +8,6 @@ urlpatterns = [
     path('hello/', views.hello),
     path('sum/', views.sum),
     path('check/', views.check),
-    path('filter/', views.filter)
+    path('filter/', views.filter),
+    path('palindrome/', views.palindrome)
 ]
