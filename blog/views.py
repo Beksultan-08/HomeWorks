@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
@@ -46,3 +45,32 @@ def palindrome(request):
     word = request.GET.get('word')
     if word[0].lower == word[-1].lower:
         return HttpResponse(f'{word} - palindrome')
+
+def age(request):
+    year = request.GET.get('year')
+    return HttpResponse(f'Your age - {2025 - int(year)}')
+
+def multiplication(request):
+    n = int(request.GET.get('n'))
+    return HttpResponse(
+        f"<p>{n } * { 1 } = {n * 1}<p/>"
+        f"<p>{n } * { 2 } = {n * 2}<p/>"
+        f"<p>{n } * { 3 } = {n * 3}<p/>"
+        f"<p>{n } * { 4 } = {n * 4}<p/>"
+        f"<p>{n } * { 5 } = {n * 5}<p/>"
+        f"<p>{n } * { 6 } = {n * 6}<p/>"
+        f"<p>{n } * { 7 } = {n * 7}<p/>"
+        f"<p>{n } * { 8 } = {n * 8}<p/>"
+        f"<p>{n } * { 9 } = {n * 9}<p/>"
+        f"<p>{n } * { 10 } = {n * 10}<p/>"
+    )
+
+def max(request):
+    numbers = request.GET.get('numbers')
+    a = max(numbers)
+    return HttpResponse(a)
+
+def temp(request):
+    celsius = request.GET.get('celsius')
+    fahrenheit = (celsius * 9/5) + 32
+    return HttpResponse(F"{celsius} = {fahrenheit}")

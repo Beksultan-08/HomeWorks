@@ -9,5 +9,9 @@ urlpatterns = [
     path('sum/', views.sum),
     path('check/', views.check),
     path('filter/', views.filter),
-    path('palindrome/', views.palindrome)
+    path('palindrome/', views.palindrome),
+    path('age/', views.age),
+    path('multiplication/', views.multiplication),
+    path('max/', views.max),
+    path('temp/', views.temp)
 ]
