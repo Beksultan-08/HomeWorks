@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Task 3</title>
-</head>
-<body>
-<h3>Result: {{ checking }}</h3>>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}
+Третья задача
+{% endblock title %}
+
+{% block content %}
+<h2>Третья задача</h2>
+<h1> Result: {{ checking }} </h1>
+<p>Нажмите на задачу в меню, чтобы увидеть её описание.</p>
+{% endblock content %}

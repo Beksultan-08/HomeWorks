@@ -24,9 +24,17 @@
         <h3 style="text-align: center;">Список задач</h3>
         <ul>
             {% block menu %}
-            <li><a href="http://localhost:8000/blog/task-1/">Задача 1</a></li>
-            <li><a href="#">Задача 2</a></li>
-            <li><a href="#">Задача 3</a></li>
+            <li><h3><a href="{% url 'home' %}">Главная</a></h3></li>
+            <li><a href="{% url 'task-1' %}">Задача 1</a></li>
+            <li><a href="{% url 'task-2' %}">Задача 2</a></li>
+            <li><a href="{% url 'task-3' %}">Задача 3</a></li>
+            <li><a href="{% url 'task-4' %}">Задача 4</a></li>
+            <li><a href="{% url 'task-5' %}">Задача 5</a></li>
+            <li><a href="{% url 'task-6' %}">Задача 6</a></li>
+            <li><a href="{% url 'task-7' %}">Задача 7</a></li>
+            <li><a href="{% url 'task-8' %}">Задача 8</a></li>
+            <li><a href="{% url 'task-9' %}">Задача 9</a></li>
+            <li><a href="{% url 'task-10' %}">Задача 10</a></li>
             {% endblock menu %}
         </ul>
     </div>

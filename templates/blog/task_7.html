@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Task 7</title>
-</head>
-<body>
-{% for i in context %}
-<h4>{{ i }}</h4>
-{% endfor %}
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}
+Sevens задача
+{% endblock title %}
+
+{% block content %}
+<h2>Sevens задача</h2>
+<h1> Result: {{ context }} </h1>
+<p>Нажмите на задачу в меню, чтобы увидеть её описание.</p>
+{% endblock content %}

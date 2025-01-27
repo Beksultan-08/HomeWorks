@@ -29,6 +29,12 @@ def task_4(request):
     filtered_words = [word for word in words if len(word) > n]
     return render(request, 'blog/task_4.html', {'filtered_words': filtered_words})
 
+def task_5(request):
+    word = request.GET.get('word', )
+    palindrome = ["Palindrome" if word[0] == word[-1] else "Not palindrome"]
+    return render(request, 'blog/task_5.html', {'palindrome': palindrome})
+
+
 def task_6(request):
     age = int(request.GET.get('age', 2007))
     res = (2025 - age)
