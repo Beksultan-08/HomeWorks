@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Task 1</title>
-</head>
-<body>
-<h3 style="color: green"> Salam,{{ name }}</h3>
-</body>
-</html>
+{% extend 'base.html' %}
+{% block title %}
+Первая задача
+{% endblock title %}
+
+{% block content %}
+<h2>Первая задача</h2>
+<p>Нажмите на задачу в меню, чтобы увидеть её описание.</p>
+{% endblock content %}

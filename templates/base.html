@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Список задач</title>
+    <title>
+    {% block title %} Список задач {% endblock title %}
+    </title>
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { display: flex; font-family: Arial, sans-serif; height: 100vh; }
@@ -20,15 +23,19 @@
     <div class="menu">
         <h3 style="text-align: center;">Список задач</h3>
         <ul>
-            <li><a href="#">Задача 1</a></li>
+            {% block menu %}
+            <li><a href="http://localhost:8000/blog/task-1/">Задача 1</a></li>
             <li><a href="#">Задача 2</a></li>
             <li><a href="#">Задача 3</a></li>
+            {% endblock menu %}
         </ul>
     </div>
     <div class="content-container">
         <div class="content" id="taskContent">
+            {% block content %}
             <h2>Выберите задачу</h2>
             <p>Нажмите на задачу в меню, чтобы увидеть её описание.</p>
+            {% endblock content %}
         </div>
     </div>
 </body>
